@@ -6,8 +6,8 @@ import twitterIcon from "@/assets/twitter.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#244D3F] ">
-      <div className="container mx-auto pt-20  text-center space-y-25">
+    <div className="bg-[#244D3F] px-2">
+      <div className="container mx-auto pt-20  text-center space-y-20">
         <div className="space-y-2">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-3">
             KeenKeeper
@@ -28,11 +28,11 @@ const Footer = () => {
             <Image src={twitterIcon} width={30} height={30} alt="twitter " />
           </div>
         </div>
-        <div className="flex justify-between items-center gap-4 py-10">
+        <div className="flex justify-between items-center gap-4 py-10 border-t border-gray-600">
           <p className="text-gray-400">
             &copy; 2026 KeenKeeper. All rights reserved.
           </p>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 flex-wrap">
             <p className="text-gray-400">Privacy Policy</p>
             <p className="text-gray-400">Terms of Service</p>
             <p className="text-gray-400">Cookies</p>
