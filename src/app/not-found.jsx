@@ -12,11 +12,11 @@ const NotFoundPage = () => {
           <Image src={errorImg} width={500} height={500} alt="404 page"></Image>
         </figure>
 
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#244D3F] sm:text-5xl">
           Page not found
         </h1>
 
-        <p className="mt-6 text-base leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-[#244d3fbb]">
           Sorry, we couldn’t find the page you’re looking for. It might have
           moved or disappeared into the digital void.
         </p>

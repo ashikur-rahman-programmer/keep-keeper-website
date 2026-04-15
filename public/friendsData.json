@@ -1,0 +1,100 @@
+{
+  "friends": [
+    {
+      "id": 1,
+      "name": "Emily Chen",
+      "picture": "https://picsum.photos/id/64/300/300",
+      "email": "emily.chen@email.com",
+      "days_since_contact": 18,
+      "status": "overdue",
+      "tags": ["college", "close friend", "hiking"],
+      "bio": "Roommate from university days. We bonded over late-night study sessions and weekend hikes in the mountains.",
+      "goal": 14,
+      "next_due_date": "2025-04-10"
+    },
+    {
+      "id": 2,
+      "name": "Marcus Okoro",
+      "picture": "https://picsum.photos/id/91/300/300",
+      "email": "marcus.okoro@protonmail.com",
+      "days_since_contact": 7,
+      "status": "on-track",
+      "tags": ["work", "basketball"],
+      "bio": "Former colleague from the marketing team. We still play pickup basketball every month and talk business ideas.",
+      "goal": 21,
+      "next_due_date": "2025-04-22"
+    },
+    {
+      "id": 3,
+      "name": "Sophia Patel",
+      "picture": "https://picsum.photos/id/1011/300/300",
+      "email": "sophia.patel92@gmail.com",
+      "days_since_contact": 25,
+      "status": "overdue",
+      "tags": ["childhood", "family friend"],
+      "bio": "Grew up on the same street. Our families still celebrate Diwali together every year.",
+      "goal": 30,
+      "next_due_date": "2025-04-05"
+    },
+    {
+      "id": 4,
+      "name": "Liam Dubois",
+      "picture": "https://picsum.photos/id/201/300/300",
+      "email": "liam.dubois@outlook.fr",
+      "days_since_contact": 12,
+      "status": "almost due",
+      "tags": ["travel", "photography"],
+      "bio": "Met during a backpacking trip through Europe in 2022. We share a love for street photography and hidden cafes.",
+      "goal": 14,
+      "next_due_date": "2025-04-18"
+    },
+    {
+      "id": 5,
+      "name": "Aisha Khan",
+      "picture": "https://picsum.photos/id/238/300/300",
+      "email": "aisha.khan@live.com",
+      "days_since_contact": 4,
+      "status": "on-track",
+      "tags": ["yoga", "close friend"],
+      "bio": "Yoga studio buddy who became one of my closest friends. We motivate each other through career changes and life ups and downs.",
+      "goal": 10,
+      "next_due_date": "2025-04-20"
+    },
+    {
+      "id": 6,
+      "name": "Diego Morales",
+      "picture": "https://picsum.photos/id/251/300/300",
+      "email": "diego.morales87@gmail.com",
+      "days_since_contact": 35,
+      "status": "overdue",
+      "tags": ["high school", "music"],
+      "bio": "High school bandmate. Still plays guitar in a local band and we always talk about starting a side project together.",
+      "goal": 45,
+      "next_due_date": "2025-03-25"
+    },
+    {
+      "id": 7,
+      "name": "Priya Sharma",
+      "picture": "https://picsum.photos/id/276/300/300",
+      "email": "priya.sharma.design@gmail.com",
+      "days_since_contact": 9,
+      "status": "on-track",
+      "tags": ["design", "work"],
+      "bio": "Collaborated on several freelance design projects. Great taste in minimalist interiors and we swap book recommendations.",
+      "goal": 14,
+      "next_due_date": "2025-04-21"
+    },
+    {
+      "id": 8,
+      "name": "Jamal Wright",
+      "picture": "https://picsum.photos/id/316/300/300",
+      "email": "jamal.wright@hey.com",
+      "days_since_contact": 16,
+      "status": "almost due",
+      "tags": ["gym", "neighborhood"],
+      "bio": "Gym partner from the local community center. We push each other during workouts and talk about fatherhood and life goals.",
+      "goal": 21,
+      "next_due_date": "2025-04-16"
+    }
+  ]
+}
