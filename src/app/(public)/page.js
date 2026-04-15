@@ -1,7 +1,9 @@
+import Hero from "@/components/Hero/Hero";
+
 export default function Home() {
   return (
-    <div>
-      <h2>homepage</h2>
+    <div className="bg-base-200 py-16 md:py-20">
+      <Hero />
     </div>
   );
 }
