@@ -1,15 +1,20 @@
 "use client";
 import React from "react";
-import StatsCards from "./StatsCards";
 import useFriends from "@/hook/useFriends";
 
 const AllFriends = () => {
   const { friends, loading } = useFriends();
-  console.log(friends, loading);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-10">
+        <span className="loading loading-spinner text-neutral"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto">
-      <StatsCards friends={friends} />
       <h2>this is friends page</h2>
     </div>
   );

@@ -1,6 +1,9 @@
+"use client";
+import useFriends from "@/hook/useFriends";
 import React from "react";
 
-const StatsCards = ({ friends }) => {
+const StatsCards = () => {
+  const { friends } = useFriends();
   return (
     <div className="container mx-auto flex justify-center lg:justify-between items-center gap-6 py-10 flex-wrap">
       <div className="p-8 space-y-2.5 text-center shadow-md rounded-xl w-full sm:w-[260px] bg-white border border-gray-100">
