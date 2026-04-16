@@ -1,4 +1,5 @@
 import friends from "@/../public/friendsData.json";
+import ToggleBtn from "@/components/ToggleBtn/ToggleBtn";
 import Image from "next/image";
 
 import React from "react";
@@ -106,23 +107,7 @@ const FriendsDetails = async ({ params }) => {
           </div>
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition">
-                <MdOutlineWifiCalling3 size={32} />
-                <span className="mt-2 text-lg font-semibold">Call</span>
-              </button>
-
-              <button className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition">
-                <MdOutlineTextsms size={32} />
-                <span className="mt-2 text-lg font-semibold">Text</span>
-              </button>
-
-              <button className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition">
-                <IoVideocamOutline size={32} />
-                <span className="mt-2 text-lg font-semibold">Video</span>
-              </button>
-            </div>
+            <ToggleBtn />
           </div>
         </div>
       </div>
