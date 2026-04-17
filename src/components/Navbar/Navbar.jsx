@@ -1,5 +1,6 @@
 import React from "react";
 import MyLinks from "./MyLinks";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -36,9 +37,9 @@ const Navbar = () => {
                 <MyLinks />
               </ul>
             </div>
-            <h2 className="text-2xl font-bold">
+            <Link href={"/"} className="text-2xl font-bold">
               Keep<span className="text-[#244D3F]">Keeper</span>
-            </h2>
+            </Link>
           </div>
           <div className="navbar-end hidden lg:flex">
             <ul className="flex justify-center items-center gap-4">

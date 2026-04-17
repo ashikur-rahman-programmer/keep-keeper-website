@@ -11,7 +11,7 @@ const MyLinks = () => {
     <>
       <li>
         <Link
-          className={`flex items-center gap-1.5 text-xl py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/" && "text-white bg-[#244D3F]"}`}
+          className={`flex items-center gap-1.5 text-lg py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/" && "text-white bg-[#244D3F]"}`}
           href={"/"}
         >
           <RiHome2Line /> Home
@@ -19,7 +19,7 @@ const MyLinks = () => {
       </li>
       <li>
         <Link
-          className={`flex items-center gap-1.5 text-xl py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/timeline" && "text-white bg-[#244D3F]"}`}
+          className={`flex items-center gap-1.5 text-lg py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/timeline" && "text-white bg-[#244D3F]"}`}
           href={"/timeline"}
         >
           <RiTimeLine /> Timeline
@@ -27,7 +27,7 @@ const MyLinks = () => {
       </li>
       <li>
         <Link
-          className={`flex items-center gap-1.5 text-xl py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/stats" && "text-white bg-[#244D3F]"}`}
+          className={`flex items-center gap-1.5 text-lg py-1.5 px-3.5 rounded-lg  font-semibold  text-[#244d3fb9] ${pathName === "/stats" && "text-white bg-[#244D3F]"}`}
           href={"/stats"}
         >
           <ImStatsDots /> Stats
