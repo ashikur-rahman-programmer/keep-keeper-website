@@ -1,6 +1,8 @@
 import friends from "@/../public/friendsData.json";
+// import NotFoundPage from "@/app/not-found";
 import ToggleBtn from "@/components/ToggleBtn/ToggleBtn";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 import React from "react";
 // import { IoVideocamOutline } from "react-icons/io5";
@@ -15,6 +17,11 @@ import { RiDeleteBinLine } from "react-icons/ri";
 const FriendsDetails = async ({ params }) => {
   const { id } = await params;
   const friend = friends.find((f) => f.id === parseInt(id));
+
+  if (!friend) {
+    notFound();
+  }
+
   return (
     <div className="bg-base-200 px-2">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-20 ">

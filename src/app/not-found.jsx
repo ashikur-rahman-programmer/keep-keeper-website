@@ -9,7 +9,7 @@ const NotFoundPage = () => {
       <div className="text-center">
         {/* Decorative Element */}
         <figure className="flex justify-center items-center">
-          <Image src={errorImg} width={400} height={400} alt="404 page"></Image>
+          <Image src={errorImg} width={300} height={300} alt="404 page"></Image>
         </figure>
 
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#244D3F] sm:text-5xl">
