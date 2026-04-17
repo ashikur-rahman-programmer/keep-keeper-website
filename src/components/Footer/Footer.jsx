@@ -32,7 +32,7 @@ const Footer = () => {
           <p className="text-gray-400">
             &copy; 2026 KeenKeeper. All rights reserved.
           </p>
-          <div className="flex justify-center items-center gap-4 flex-wrap">
+          <div className="flex justify-center items-center gap-2 md:gap-4 flex-wrap">
             <p className="text-gray-400">Privacy Policy</p>
             <p className="text-gray-400">Terms of Service</p>
             <p className="text-gray-400">Cookies</p>

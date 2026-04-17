@@ -13,6 +13,7 @@ const FriendCard = ({ friend }) => {
             width={96}
             height={96}
             className="rounded-full object-cover"
+            loading="eager"
           />
         </div>
 

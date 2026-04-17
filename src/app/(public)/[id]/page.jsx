@@ -3,11 +3,11 @@ import ToggleBtn from "@/components/ToggleBtn/ToggleBtn";
 import Image from "next/image";
 
 import React from "react";
-import { IoVideocamOutline } from "react-icons/io5";
+// import { IoVideocamOutline } from "react-icons/io5";
 import {
   MdOutlineNotificationsPaused,
-  MdOutlineTextsms,
-  MdOutlineWifiCalling3,
+  // MdOutlineTextsms,
+  // MdOutlineWifiCalling3,
 } from "react-icons/md";
 import { PiArchiveBold } from "react-icons/pi";
 import { RiDeleteBinLine } from "react-icons/ri";

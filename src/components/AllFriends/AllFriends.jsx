@@ -13,7 +13,7 @@ const AllFriends = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center py-10">
+      <div className="flex justify-center items-center py-40">
         <span className="loading loading-spinner text-neutral"></span>
       </div>
     );

@@ -7,10 +7,20 @@ import callImg from "@/assets/call.png";
 import textImg from "@/assets/text.png";
 import videoImg from "@/assets/video.png";
 import { RiFlagOffLine } from "react-icons/ri";
+import useFriends from "@/hook/useFriends";
 
 const TimelinePage = () => {
   const { active } = useContext(allFriendsContext);
+  const { loading } = useFriends();
   const [filtered, setFiltered] = useState("all");
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-60">
+        <span className="loading loading-spinner text-neutral"></span>
+      </div>
+    );
+  }
 
   const filteredData =
     filtered === "all" ? active : active.filter((i) => i.type === filtered);
@@ -67,11 +77,11 @@ const TimelinePage = () => {
               </div>
               {/* content */}
               <div>
-                <p className="text-[16px]  text-gray-500">
+                <p className=" flex items-center gap-1 text-[16px]  text-gray-500">
                   <span className="text-black text-lg font-semibold capitalize">
                     {item.type}
                   </span>
-                  with {item.name}
+                  <span>with {item.name}</span>
                 </p>
 
                 {/* date */}
