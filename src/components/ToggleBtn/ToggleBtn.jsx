@@ -1,16 +1,29 @@
 "use client";
-import React from "react";
+import { allFriendsContext } from "@/context/FriendContext";
+import React, { useContext } from "react";
 import { IoVideocamOutline } from "react-icons/io5";
 import { MdOutlineTextsms, MdOutlineWifiCalling3 } from "react-icons/md";
 
-const ToggleBtn = () => {
-  const handleToggleBtn = () => {
-    console.log("clicked");
+const ToggleBtn = ({ friend }) => {
+  const { active, setActive } = useContext(allFriendsContext);
+
+  // console.log(active);
+  const handleToggleBtn = (type) => {
+    const newData = {
+      ...friend,
+      type,
+      date: new Date().toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      }),
+    };
+    setActive([...active, newData]);
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       <button
-        onClick={handleToggleBtn}
+        onClick={() => handleToggleBtn("call")}
         className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
       >
         <MdOutlineWifiCalling3 size={32} />
@@ -18,7 +31,7 @@ const ToggleBtn = () => {
       </button>
 
       <button
-        onClick={handleToggleBtn}
+        onClick={() => handleToggleBtn("text")}
         className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
       >
         <MdOutlineTextsms size={32} />
@@ -26,7 +39,7 @@ const ToggleBtn = () => {
       </button>
 
       <button
-        onClick={handleToggleBtn}
+        onClick={() => handleToggleBtn("video")}
         className="flex flex-col items-center justify-center py-6 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
       >
         <IoVideocamOutline size={32} />

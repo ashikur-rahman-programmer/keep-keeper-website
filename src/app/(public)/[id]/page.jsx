@@ -107,7 +107,7 @@ const FriendsDetails = async ({ params }) => {
           </div>
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
-            <ToggleBtn />
+            <ToggleBtn friend={friend} />
           </div>
         </div>
       </div>
