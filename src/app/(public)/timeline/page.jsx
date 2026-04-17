@@ -12,7 +12,9 @@ import useFriends from "@/hook/useFriends";
 const TimelinePage = () => {
   const { active } = useContext(allFriendsContext);
   const { loading } = useFriends();
+
   const [filtered, setFiltered] = useState("all");
+  const [search, setSearch] = useState("");
 
   if (loading) {
     return (
@@ -22,10 +24,17 @@ const TimelinePage = () => {
     );
   }
 
-  const filteredData =
-    filtered === "all" ? active : active.filter((i) => i.type === filtered);
+  const searchText = search.toLowerCase();
 
-  // console.log(active);
+  const filteredData = active
+    .filter((i) => (filtered === "all" ? true : i.type === filtered))
+    .filter((item) => {
+      const name = item.name.toLowerCase();
+      const type = item.type.toLowerCase();
+
+      return name.includes(searchText) || type.includes(searchText);
+    });
+
   return (
     <div className="bg-base-200 px-2">
       <div className="container mx-auto py-20 space-y-6">
@@ -33,29 +42,57 @@ const TimelinePage = () => {
         <h2 className="text-3xl md:text-5xl font-semibold text-black">
           Timeline
         </h2>
-        {/* dropdown */}
-        <div className="dropdown dropdown-bottom">
-          <div tabIndex={0} role="button" className="btn m-1">
-            Filter Timeline <IoIosArrowDown />
+
+        {/* dropdown and search*/}
+        <div className="flex justify-between items-center flex-col md:flex-row gap-4">
+          <div className="dropdown dropdown-bottom">
+            <div tabIndex={0} role="button" className="btn m-1">
+              Filter Timeline <IoIosArrowDown />
+            </div>
+            <ul
+              tabIndex="-1"
+              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+            >
+              <li onClick={() => setFiltered("all")}>
+                <a>All</a>
+              </li>
+              <li onClick={() => setFiltered("call")}>
+                <a>Call</a>
+              </li>
+              <li onClick={() => setFiltered("text")}>
+                <a>Text</a>
+              </li>
+              <li onClick={() => setFiltered("video")}>
+                <a>Video</a>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex="-1"
-            className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-          >
-            <li onClick={() => setFiltered("all")}>
-              <a>All</a>
-            </li>
-            <li onClick={() => setFiltered("call")}>
-              <a>Call</a>
-            </li>
-            <li onClick={() => setFiltered("text")}>
-              <a>Text</a>
-            </li>
-            <li onClick={() => setFiltered("video")}>
-              <a>Video</a>
-            </li>
-          </ul>
+          <label className="input">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              onChange={(e) => setSearch(e.target.value)}
+              type="search"
+              required
+              placeholder="Search"
+            />
+          </label>
         </div>
+
         {/* cards */}
         {filteredData.length > 0 ? (
           filteredData.map((item, index) => (

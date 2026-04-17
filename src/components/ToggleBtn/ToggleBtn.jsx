@@ -3,6 +3,7 @@ import { allFriendsContext } from "@/context/FriendContext";
 import React, { useContext } from "react";
 import { IoVideocamOutline } from "react-icons/io5";
 import { MdOutlineTextsms, MdOutlineWifiCalling3 } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const ToggleBtn = ({ friend }) => {
   const { active, setActive } = useContext(allFriendsContext);
@@ -19,6 +20,7 @@ const ToggleBtn = ({ friend }) => {
       }),
     };
     setActive([...active, newData]);
+    toast.success(`${type} with ${friend.name} added to timeline`);
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
